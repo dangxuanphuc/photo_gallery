@@ -13,13 +13,11 @@
 ActiveRecord::Schema.define(version: 2021_05_08_022708) do
 
   create_table "photo_gallery_entries", charset: "utf8mb4", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.string "image"
     t.integer "likes_count", default: 0, null: false
     t.integer "views_count", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_photo_gallery_entries_on_user_id"
   end
 
   create_table "photo_gallery_entry_likes", charset: "utf8mb4", force: :cascade do |t|
@@ -64,7 +62,6 @@ ActiveRecord::Schema.define(version: 2021_05_08_022708) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "photo_gallery_entries", "users"
   add_foreign_key "photo_gallery_entry_likes", "photo_gallery_entries"
   add_foreign_key "photo_gallery_entry_likes", "users"
   add_foreign_key "photo_gallery_entry_views", "photo_gallery_entries"

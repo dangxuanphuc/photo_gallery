@@ -1,10 +1,9 @@
 <div id="main">
-  <h1>Main Area</h1> ...
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper arcu vitae neque rhoncus, gravida imperdiet sapien tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque id dui at elit viverra egestas. Aliquam in vestibulum odio. Integer volutpat, felis quis ornare sodales, sapien elit ornare ipsum, eu fermentum felis felis nec odio. Nulla libero velit, vehicula id convallis at, tempor in justo. Vivamus dictum interdum risus, sed luctus lectus iaculis placerat.</p>
-
-  <p>In ultrices suscipit ex. Integer non felis semper ligula rhoncus elementum at in lorem. Cras laoreet nibh sodales mi luctus, eu pulvinar justo convallis. Suspendisse eu cursus est. In velit magna, semper fringilla libero id, molestie bibendum felis. Cras tellus sem, bibendum quis porta at, vestibulum sit amet nisl. Sed tincidunt erat quam.</p>
-
-  <p>Sed sed blandit lorem, id rhoncus leo. Maecenas eu arcu pellentesque lacus pretium tempor. Nulla a libero iaculis, fermentum purus sagittis, commodo enim. Fusce felis sapien, consequat ut mattis a, euismod at nisl. Donec posuere tellus id commodo laoreet. Mauris faucibus lacus ex, id efficitur odio blandit et. Donec lobortis metus et nisi tincidunt, nec porta dolor suscipit. Sed non nisl molestie, volutpat lacus non, suscipit elit. Etiam et sapien sollicitudin, porttitor enim ut, tempus dui. Integer volutpat augue vel orci consectetur, nec condimentum odio eleifend. Nam sit amet tristique nibh, sed facilisis neque. Pellentesque sodales magna ac turpis gravida, sit amet rhoncus velit euismod.</p>
-
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore natus at commodi itaque velit? Modi eum commodi excepturi quidem? Amet molestiae rerum sit doloribus laudantium minima eius saepe corporis quos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut voluptas, deserunt, impedit sint esse facere minus blanditiis excepturi corporis deleniti nostrum adipisci odit doloremque.</p>
+  <div class="grid" data-masonry='{ "itemSelector": ".grid-item" }'>
+    <% @photo_gallery_entries.each do |photo_gallery_entry| %>
+      <div class="grid-item">
+        <%= image_tag photo_gallery_entry.image, class: "image-item" %>
+      </div>
+    <% end %>
+  </div>
 </div>
