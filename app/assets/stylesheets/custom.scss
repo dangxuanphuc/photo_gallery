@@ -1,0 +1,89 @@
+body {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background: url("https://res.cloudinary.com/phucdx/image/upload/v1620453890/salary/a_mbtser.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 250px 45%;
+}
+
+#sticky-sidebar {
+  background: url("https://res.cloudinary.com/phucdx/image/upload/v1620455475/salary/16_buhusj.jpg");
+  background-size: cover;
+}
+
+#overlay {
+  border-radius: 50%;
+  padding: 0 0 0 0;
+  opacity: 1.0;
+
+  .avatar {
+    background: url("https://res.cloudinary.com/phucdx/image/upload/v1620446777/salary/1_drqvex.jpg") center center no-repeat;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    align-content: center;
+    cursor: pointer;
+    transition: 1.6s;
+    border: 3px solid #fff;
+
+    &:hover {
+      box-shadow: 0 0 10px 0 #9e9ea9;
+      transform: scale(1.05);
+    }
+  }
+
+  .trick {
+    display: inline-block;
+    vertical-align: middle;
+    height: 150px;
+
+    &:hover img {
+      transform: scale(1);
+    }
+  }
+
+  .name {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 300;
+    position: absolute center;
+    text-align: center;
+    padding-left: 0%;
+    margin-top: 40px;
+  }
+}
+
+.social {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 34px;
+  height: 34px;
+  position: relative;
+
+  .fa-facebook-f {
+    position: absolute;
+    font-size: 22px;
+    right: 9px;
+    top: 5px;
+  }
+
+  .fa-instagram {
+    position: absolute;
+    font-size: 22px;
+    right: 7px;
+    top: 5px;
+  }
+
+  .fa-twitter {
+    position: absolute;
+    font-size: 22px;
+    right: 4px;
+    top: 5px;
+    color: #0564c5;
+  }
+}
