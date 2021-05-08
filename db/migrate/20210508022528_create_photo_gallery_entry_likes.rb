@@ -9,6 +9,6 @@ class CreatePhotoGalleryEntryLikes < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
-    add_index :photo_gallery_entry_likes, [:photo_gallery_entry_id, :browser_uid], unique: true
+    add_index :photo_gallery_entry_likes, [:photo_gallery_entry_id, :browser_uid], unique: true, name: "photo_gallery_entry_id_and_browser_uid"
   end
 end
