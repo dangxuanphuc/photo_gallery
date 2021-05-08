@@ -6,9 +6,23 @@ body {
   background-position: 250px 45%;
 }
 
+#main {
+  max-width: 70%;
+  margin-left: 30%;
+}
+
 #sticky-sidebar {
+  max-width: 30%;
   background: url("https://res.cloudinary.com/phucdx/image/upload/v1620455475/salary/16_buhusj.jpg");
   background-size: cover;
+  position: relative;
+
+  footer {
+    position: absolute;
+    width: 96%;
+    bottom: 3%;
+    color: #fff;
+  }
 }
 
 #overlay {
@@ -49,7 +63,7 @@ body {
 
   .name {
     color: #fff;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 300;
     position: absolute center;
     text-align: center;
@@ -85,5 +99,62 @@ body {
     right: 4px;
     top: 5px;
     color: #0564c5;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    background-position: 150px 45%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #sticky-sidebar {
+    max-width: 35%;
+
+    #overlay {
+      .name {
+        font-size: 25px;
+      }
+    }
+  }
+  #main {
+    max-width: 65%;
+    margin-left: 35%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #sticky-sidebar {
+    #overlay {
+      .avatar {
+        width: 150px;
+        height: 150px;
+      }
+      .name {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  body {
+    background-position: 0 45%;
+  }
+
+  #sticky-sidebar {
+    position: static !important;
+    max-width: 100%;
+    max-height: 55vh !important;
+
+    footer {
+      display: none;
+    }
+  }
+
+  #main {
+    max-width: 100%;
+    margin-left: 0;
   }
 }
