@@ -1,5 +1,5 @@
 <div id="main">
-  <div class="grid" data-masonry='{ "itemSelector": ".grid-item" }'>
+  <div class="grid">
     <% @photo_gallery_entries.each do |photo_gallery_entry| %>
       <div class="grid-item">
         <%= image_tag photo_gallery_entry.image, class: "image-item" %>
@@ -7,3 +7,4 @@
     <% end %>
   </div>
 </div>
+<div class="grid-alpha"></div>
